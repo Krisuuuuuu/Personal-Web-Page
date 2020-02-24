@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+div.wrapper{
+    max-width: 1440px;
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    top: -90px;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 0;
+    transition: 0.3s linear;
+}
+
+nav.showNav
+{
+    top: 0;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 30px 0px 70px 0;
+    margin-left: 15%;
+}
+nav ul li{
+    flex-basis: 20%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav ul li:hover{
+    background-color: #666;
+    color: white;
+}
+
+nav ul li a{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+nav ul li.contact{
+    border: 2px solid white;
+    margin: 0 3% 0 3%;
+}
+
+.burger{
+    position: fixed;
+    top: 10px;
+    left: 25px;
+    z-index: 1;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.burger:hover{
+    animation: burger linear 0.3s forwards;
+}
+
+.burgerTransform{
+    top: 100px;
+}
+
+.burger .unactive{
+    display: none;
+}
+
+@keyframes burger{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+header{
+    min-height: 100vh;
+}
