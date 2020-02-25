@@ -11,8 +11,9 @@ html{
 }
 
 div.wrapper{
-    max-width: 1440px;
+    max-width: 1920px;
     position: relative;
+    margin: 0 auto;
 }
 
 nav{
@@ -26,21 +27,20 @@ nav{
     transition: 0.3s linear;
 }
 
-nav.showNav
-{
+nav.showNav{
     top: 0;
 }
 
 nav ul{
     display: flex;
+    flex-direction: row;
     list-style: none;
     padding: 30px 0px 70px 0;
     margin-left: 15%;
 }
 nav ul li{
     flex-basis: 20%;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-grow: 1;
     flex-shrink: 1;
     text-align: center;
@@ -48,10 +48,7 @@ nav ul li{
     transition: 0.3s;
 }
 
-nav ul li:hover{
-    background-color: #666;
-    color: white;
-}
+
 
 nav ul li a{
     font-size: 30px;
@@ -77,10 +74,6 @@ nav ul li.contact{
     transition: 0.3s linear;
 }
 
-.burger:hover{
-    animation: burger linear 0.3s forwards;
-}
-
 .burgerTransform{
     top: 100px;
 }
@@ -98,6 +91,297 @@ nav ul li.contact{
         transform: scale(1.3);
     }
 }
+
+@media (orientation: portrait)
+{
+    nav{
+        top: 0;
+        left: -90px;
+        height: 100vh;
+        width: 150px;
+    }
+
+    nav.showNav{
+        left: 0;
+    }
+
+    nav ul{
+        flex-direction: column;
+        margin: 50px 0 0 0;
+        padding: 0;
+    }
+
+    nav ul li.contact{
+        border: 2px solid white;
+        margin: 3% 0 3% 0;
+    }
+
+    .burger{
+        top: 10px;
+        left: 30px;
+    }
+
+    .burgerTransform{
+        left: 100px;
+    }
+}
+
+
+@media (orientation: portrait) and (min-width: 320px)
+{
+    nav{
+        left: -120px;
+        width: 150px;
+    }
+
+    nav ul{
+        align-items: flex-start;
+    }
+
+    nav ul li{
+        width: 75%;
+        margin: 3%;
+        padding: 10px 15px;
+    }
+
+    nav ul li a{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    nav ul li.contact{
+        border: 2px solid white;
+        margin: 3%;
+    }
+    
+    .burger{
+        top: 10px;
+        left: 8px;
+        font-size: 15px;
+    }
+
+    .burgerTransform{
+        left: 120px;
+    }
+}
+
+  @media (orientation: portrait) and (min-width: 768px) {
+    nav{
+        left: -170px;
+        width: 220px;
+    }
+
+    nav ul li{
+        width: 70%;
+        margin: 3%;
+        padding: 10px 15px;
+    }
+
+    nav ul li a{
+        font-size: 25px;
+        line-height: 35px;
+    }
+    
+    .burger{
+        top: 15px;
+        left: 15px;
+        font-size: 25px;
+    }
+
+    .burgerTransform{
+        left: 180px;
+    }
+  }
+
+  @media (orientation: portrait) and (min-width: 1024px) {
+    nav{
+        left: -250px;
+        width: 300px;
+    }
+    nav ul{
+        align-items: flex-start;
+    }
+    
+    nav ul li{
+        width: 70%;
+        margin: 5%;
+        padding: 10px 15px;
+    }
+
+    nav ul li a{
+        font-size: 28px;
+        line-height: 38px;
+    }
+    
+    .burger{
+        top: 15px;
+        left: 13px;
+        font-size: 28px;
+    }
+
+    .burgerTransform{
+        left: 260px;
+    }
+  }
+
+  @media (orientation: landscape) and (min-width: 533px) {
+    nav{
+        top: -80px;
+        height: 100px;
+    }
+
+    nav ul{
+        margin-left: 8%;
+        align-items: flex-start;
+    }
+
+    nav ul li{
+        padding: 5px 10px;
+    }
+
+    nav ul li.contact{
+        border: 2px solid white;
+        margin: 0 3%;
+    }
+
+    nav ul li a{
+        font-size: 13px;
+        line-height: 18px;
+    }
+    
+    .burger{
+        top: 2px;
+        left: 15px;
+        font-size: 13px;
+    }
+
+    .burgerTransform{
+        top: 80px;
+    }
+  }
+
+  @media (orientation: landscape) and (min-width: 640px) {
+    nav{
+        top: -80px;
+        height: 100px;
+    }
+
+    nav ul{
+        margin-left: 10%;
+        align-items: flex-start;
+    }
+
+    nav ul li{
+        padding: 5px 15px;
+    }
+
+    nav ul li.contact{
+        border: 2px solid white;
+        margin: 0 3%;
+    }
+
+    nav ul li a{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+    .burger{
+        top: 1px;
+        left: 15px;
+        font-size: 15px;
+    }
+
+    .burgerTransform{
+        top: 80px;
+    }
+  }
+  
+  @media (orientation: landscape) and (min-width: 1024px) {
+    nav{
+        top: -90px;
+        height: 120px;
+    }
+
+    nav ul{
+        margin-left: 10%;
+        align-items: flex-start;
+    }
+
+    nav ul li{
+        padding: 5px 15px;
+    }
+
+    nav ul li.contact{
+        border: 2px solid white;
+        margin: 0 3%;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .burger{
+        top: 4px;
+        left: 15px;
+        font-size: 20px;
+    }
+
+    .burgerTransform{
+        top: 90px;
+    }
+
+  }
+  
+  @media (orientation: landscape) and (min-width: 1280px) {
+    nav{
+        top: -90px;
+        height: 130px;
+    }
+
+    nav ul{
+        margin-left: 10%;
+        align-items: flex-start;
+    }
+
+    nav ul li{
+        padding: 5px 20px;
+    }
+
+    nav ul li.contact{
+        border: 2px solid white;
+        margin: 0 3%;
+    }
+
+    nav ul li a{
+        font-size: 25px;
+        line-height: 35px;
+    }
+    
+    .burger{
+        top: 5px;
+        left: 15px;
+        font-size: 25px;
+    }
+
+    .burgerTransform{
+        top: 95px;
+    }
+  
+  }
+
+  @media (orientation: landscape) and (min-width: 1367px)
+  {
+    nav ul li:hover{
+        background-color: #666;
+        color: white;
+    }
+
+    .burger:hover{
+        animation: burger linear 0.3s forwards;
+    }
+  }
+  
 
 header{
     min-height: 100vh;
