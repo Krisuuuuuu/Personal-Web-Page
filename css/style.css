@@ -12,6 +12,7 @@ html{
 
 div.wrapper{
     max-width: 1920px;
+    min-height: 100vh;
     position: relative;
     margin: 0 auto;
 }
@@ -23,7 +24,7 @@ nav{
     height: 150px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 0;
+    z-index: 10;
     transition: 0.3s linear;
 }
 
@@ -82,7 +83,8 @@ nav ul li.contact{
     display: none;
 }
 
-@keyframes burger{
+@keyframes burger
+{
     0%{
         transform: scale(1);
     }
@@ -165,7 +167,8 @@ nav ul li.contact{
     }
 }
 
-  @media (orientation: portrait) and (min-width: 768px) {
+  @media (orientation: portrait) and (min-width: 768px) 
+  {
     nav{
         left: -170px;
         width: 220px;
@@ -193,7 +196,8 @@ nav ul li.contact{
     }
   }
 
-  @media (orientation: portrait) and (min-width: 1024px) {
+  @media (orientation: portrait) and (min-width: 1024px) 
+  {
     nav{
         left: -250px;
         width: 300px;
@@ -224,7 +228,8 @@ nav ul li.contact{
     }
   }
 
-  @media (orientation: landscape) and (min-width: 533px) {
+  @media (orientation: landscape) and (min-width: 533px) 
+  {
     nav{
         top: -80px;
         height: 100px;
@@ -260,7 +265,8 @@ nav ul li.contact{
     }
   }
 
-  @media (orientation: landscape) and (min-width: 640px) {
+  @media (orientation: landscape) and (min-width: 640px) 
+  {
     nav{
         top: -80px;
         height: 100px;
@@ -296,7 +302,8 @@ nav ul li.contact{
     }
   }
   
-  @media (orientation: landscape) and (min-width: 1024px) {
+  @media (orientation: landscape) and (min-width: 1024px) 
+  {
     nav{
         top: -90px;
         height: 120px;
@@ -333,7 +340,8 @@ nav ul li.contact{
 
   }
   
-  @media (orientation: landscape) and (min-width: 1280px) {
+  @media (orientation: landscape) and (min-width: 1280px) 
+  {
     nav{
         top: -90px;
         height: 130px;
@@ -384,5 +392,188 @@ nav ul li.contact{
   
 
 header{
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/header_bgc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header div.motto{
+    position: absolute;
+    top: 60%;
+    left: -50%;
+    font-family: 'Saira Extra Condensed';
+    color: white;
+}
+
+header div.motto h1{
+    font-size: 60px;
+}
+
+header div.motto h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+@keyframes motto
+{
+    0%{
+        left: -50%;
+    }
+
+    100%{
+        left: 10%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1367px)
+{
+    header div.motto{
+        animation: motto linear 0.5s forwards;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 533px) 
+{
+    header div.motto{
+        top: 60%;
+        left: 7%;
+    }
+    
+    header div.motto h1{
+        font-size: 25px;
+    }
+    
+    header div.motto h2{
+        font-size: 15px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) 
+{
+    header div.motto{
+        top: 60%;
+        left: 10%;
+    }
+}
+  
+@media (orientation: landscape) and (min-width: 731px) 
+{
+    header div.motto{
+        top: 60%;
+        left: 10%;
+    }
+    
+    header div.motto h1{
+        font-size: 30px;
+    }
+    
+    header div.motto h2{
+        font-size: 20px;
+    }
+}
+  
+@media (orientation: landscape) and (min-width: 1024px) 
+{
+    header div.motto h1{
+        font-size: 45px;
+    }
+    
+    header div.motto h2{
+        font-size: 30px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1366px)
+{
+    header div.motto h1{
+        font-size: 55px;
+    }
+    
+    header div.motto h2{
+        font-size: 35px;
+    }
+}
+
+@media (orientation: portrait)
+{
+    header{
+        background-size: cover;
+        background-position: 70% 50%;
+    }
+
+    header div.motto{
+        top: 80%;
+        left: 13%;
+    }
+    
+    header div.motto h1{
+        font-size: 25px;
+    }
+    
+    header div.motto h2{
+        font-size: 15px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 360px) 
+{
+    header div.motto{
+        top: 80%;
+        left: 15%;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 411px) 
+{
+    header div.motto{
+        top: 80%;
+        left: 15%;
+    }
+    
+    header div.motto h1{
+        font-size: 30px;
+    }
+    
+    header div.motto h2{
+        font-size: 20px;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 768px) 
+{
+    header div.motto{
+        top: 80%;
+        left: 17%;
+    }
+    
+    header div.motto h1{
+        font-size: 50px;
+    }
+    
+    header div.motto h2{
+        font-size: 30px;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 1024px) 
+{
+    header div.motto{
+        top: 80%;
+        left: 18%;
+    }
+    
+    header div.motto h1{
+        font-size: 65px;
+    }
+    
+    header div.motto h2{
+        font-size: 45px;
+    }
+
 }
