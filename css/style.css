@@ -7,14 +7,13 @@
 html{
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 24px;
-    overflow: hidden;
 }
 
 div.wrapper{
     max-width: 1920px;
     min-height: 100vh;
-    position: relative;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 nav{
@@ -68,7 +67,7 @@ nav ul li.contact{
     position: fixed;
     top: 10px;
     left: 25px;
-    z-index: 1;
+    z-index: 10;
     color: white;
     font-size: 30px;
     cursor: pointer;
@@ -404,9 +403,15 @@ header{
 header div.motto{
     position: absolute;
     top: 60%;
-    left: -50%;
+    left: 10%;
+    transform: translateX(-100vw); 
     font-family: 'Saira Extra Condensed';
     color: white;
+    transition: 1s;
+}
+
+header div.motto.mottoActive{
+    transform: translateX(0); 
 }
 
 header div.motto h1{
@@ -416,24 +421,6 @@ header div.motto h1{
 header div.motto h2{
     font-size: 35px;
     text-align: center;
-}
-
-@keyframes motto
-{
-    0%{
-        left: -50%;
-    }
-
-    100%{
-        left: 10%;
-    }
-}
-
-@media (orientation: landscape) and (min-width: 1367px)
-{
-    header div.motto{
-        animation: motto linear 0.5s forwards;
-    }
 }
 
 @media (orientation: landscape) and (min-width: 533px) 
@@ -576,4 +563,151 @@ header div.motto h2{
         font-size: 45px;
     }
 
+}
+
+section.me{
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/hello_world.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section.me div.aboutMe{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%) scale(0) rotate(-180deg);
+    font-family: 'Saira Extra Condensed';
+    text-align: center;
+    color: white;
+    transition: 2s;
+}
+
+section.me div.aboutMe.aboutMeActive{
+    transform: translateX(-50%) scale(1) rotate(0deg);
+}
+section.me div.aboutMe h1{
+    font-size: 55px;
+}
+
+section.me div.aboutMe h2{
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+@media (orientation: portrait) and (min-width: 320px)
+{
+    section.me div.aboutMe h1{
+        font-size: 25px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 375px) and (min-height: 800px)
+{
+    section.me div.aboutMe h1{
+        font-size: 30px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 60px;
+        font-size: 25px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 411px)
+{
+    section.me div.aboutMe h1{
+        font-size: 30px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 25px;
+        font-size: 25px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 711px)
+{
+    section.me div.aboutMe h1{
+        font-size: 40px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 100px;
+        font-size: 35px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 1024px)
+{
+    section.me div.aboutMe h1{
+        font-size: 55px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 150px;
+        font-size: 45px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 533px)
+{
+    section.me div.aboutMe h1{
+        font-size: 25px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) 
+{  
+    section.me div.aboutMe h2{
+        margin-top: 30px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 731px)
+{
+    section.me div.aboutMe h1{
+        font-size: 30px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 25px;
+        font-size: 25px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px)
+{
+    section.me div.aboutMe h1{
+        font-size: 45px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 35px;
+        font-size: 40px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1366px)
+{
+    section.me div.aboutMe h1{
+        font-size: 55px;
+    }
+    
+    section.me div.aboutMe h2{
+        margin-top: 50px;
+        font-size: 45px;
+    }
 }
