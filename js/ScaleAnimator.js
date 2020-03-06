@@ -1,12 +1,13 @@
-const $description = $("section.me div.aboutMe")
-const descriptionHeight = $description.outerHeight();
-const descriptionPosition = $description.offset().top;
+const $description = $("section.aboutMe div.container div.description")
+const $section = $("section.aboutMe")
+const sectionHeight = $section.outerHeight();
+const sectionPosition = $section.offset().top;
 
 function ShowDescritpion()
 {
     let scrollValue = $document.scrollTop();
 
-    if(scrollValue > descriptionPosition - windowHeight)
+    if(scrollValue > sectionPosition - windowHeight)
     {
         $description.addClass("aboutMeActive");
     }
