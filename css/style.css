@@ -48,8 +48,6 @@ nav ul li{
     transition: 0.3s;
 }
 
-
-
 nav ul li a{
     font-size: 30px;
     color: white;
@@ -578,7 +576,7 @@ section.me div.aboutMe{
     position: absolute;
     top: 15%;
     left: 50%;
-    transform: translateX(-50%) scale(0) rotate(-180deg);
+    transform: translateX(-50%) scale(0);
     font-family: 'Saira Extra Condensed';
     text-align: center;
     color: white;
@@ -586,7 +584,7 @@ section.me div.aboutMe{
 }
 
 section.me div.aboutMe.aboutMeActive{
-    transform: translateX(-50%) scale(1) rotate(0deg);
+    transform: translateX(-50%) scale(1);
 }
 section.me div.aboutMe h1{
     font-size: 55px;
@@ -710,4 +708,356 @@ section.me div.aboutMe h2{
         margin-top: 50px;
         font-size: 45px;
     }
+}
+
+section.authorities{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #bbb;
+}
+
+section.authorities img.black{
+    position: absolute;
+    bottom: -60%;
+    left: 0;
+    height: 160%;
+    opacity: 0.5;
+    animation: greyImage 8s linear infinite;
+}
+
+section.authorities img.color{
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    height: 60%;
+    z-index: 1;
+    animation: colorImage 8s linear infinite;
+}
+
+section.authorities div.string{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    z-index: 2;
+    font-family: 'Saira Extra Condensed';
+    animation: text 8s linear infinite;
+}
+
+section.authorities div.string h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+}
+
+section.authorities div.string h2{
+    font-size: 40px;
+}
+
+@keyframes greyImage{
+    0%{
+        opacity: 0;
+        transform: translateX(0) scale(1);
+    }
+
+    5%{
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 0.5;
+    }
+
+    90%{
+        opacity: 0.5;
+    }
+
+    95%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateX(5%) scale(1.05);
+    }   
+}
+
+@keyframes colorImage{
+    0%{
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    5%{
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    95%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateX(-5%) scale(1.1);
+    }
+}
+
+@keyframes text{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    5%{
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    95%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+@media(orientation: portrait) and (min-width: 320px)
+{
+    section.authorities img.black{
+        bottom: 0;
+        left: 0;
+        height: 100%;
+    }
+    
+    section.authorities img.color{
+        bottom: 0;
+        right: 0;
+        transform: translateX(-50%);
+        height: 60%;
+    }
+    
+    section.authorities div.string{
+        width: 80%;
+        top: 10%;
+        left: 14%;
+        text-align: center;
+    }
+    
+    section.authorities div.string h1{
+        font-size: 25px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 20px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 411px)
+{
+    section.authorities img.black{
+        left: -10%;
+    }
+    
+    section.authorities img.color{
+        bottom: 0;
+        right: -5%;
+    }
+
+    section.authorities div.string h1{
+        font-size: 30px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 25px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 375px) and (min-height: 812px)
+{
+    section.authorities img.black{
+        left: -15%;
+    }
+    
+    section.authorities img.color{
+        bottom: 0;
+        right: -10%;
+    }
+
+    section.authorities div.string h1{
+        font-size: 30px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 25px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 768px) and (min-height: 1024px)
+{
+    section.authorities img.black{
+        left: 0%;
+    }
+    
+    section.authorities img.color{
+        bottom: 0;
+        right: 0;
+    }
+
+    section.authorities div.string h1{
+        font-size: 45px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 40px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 1024px) and (min-height: 1366px)
+{
+    section.authorities div.string h1{
+        font-size: 55px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 40px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 533px)
+{
+    section.authorities div.string{
+        width: 100%;
+        top: 10%;
+        left: 0;
+        text-align: center;
+    }
+
+    section.authorities div.string h1{
+        font-size: 25px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 20px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 731px)
+{
+    section.authorities div.string h1{
+        font-size: 30px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 25px;
+    }
+
+    section.authorities img.color{
+        right: 10%;
+        height: 65%;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 823px)
+{
+    section.authorities div.string h1{
+        font-size: 30px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 25px;
+    }
+    
+}
+
+@media(orientation: landscape) and (min-width: 1024px)
+{
+    section.authorities img.black{
+        bottom: -50%;
+        left: -10%;
+        height: 160%;
+    }
+    
+    section.authorities img.color{
+        bottom: 0;
+        right: 5%;
+        height: 65%;
+    }
+
+    section.authorities div.string{
+        top: 8%;
+    }
+
+    section.authorities div.string h1{
+        font-size: 55px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 40px;
+    }
+    
+}
+
+@media(orientation: landscape) and (min-width: 1366px)
+{
+    section.authorities img.black{
+        bottom: -50%;
+        left: -10%;
+        height: 160%;
+    }
+    
+    section.authorities img.color{
+        bottom: 0;
+        right: 5%;
+        height: 65%;
+    }
+
+    section.authorities div.string{
+        top: 10%;
+    }
+
+    section.authorities div.string h1{
+        font-size: 60px;
+    }
+    
+    section.authorities div.string h2{
+        font-size: 40px;
+    }
+    
+}
+
+@media(orientation: landscape) and (min-width: 1367px)
+{
+    section.authorities img.black{
+        bottom: -60%;
+        left: 0;
+    }
+    
+    section.authorities img.color{
+        bottom: 0;
+        right: 15%;
+        height: 60%;
+    }
+    
+    section.authorities div.string{
+        width: 50%;
+        top: 10%;
+        left: 45%;
+    }   
 }
