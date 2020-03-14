@@ -565,9 +565,13 @@ header div.motto h2{
 }
 
 section.aboutMe{
+    position: relative;
     height: 100vh;
     background-color: #bbb;
-    position: relative;
+    background-image: url(../images/sky.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 div.container{
@@ -580,7 +584,6 @@ div.container{
     width: 80%;
     height: 80%;
     background-color: rgb(1, 87, 97);
-
 }
 
 section.aboutMe div.container div.world{
@@ -747,9 +750,14 @@ section.authorities{
     position: relative;
     height: 110vh;
     background-color: #bbb;
+    background-image: url(../images/court.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     color: #ddd;
     font-family: 'Saira Extra Condensed';
     overflow: hidden;
+    animation: background 8s linear infinite;
 }
 
 section.authorities h1{
@@ -768,7 +776,7 @@ section.authorities div.text{
     width: 80%;
     position: absolute;
     z-index: 3;
-    color: black;
+    color: white;
     animation: text 8s linear infinite;
 }
 
@@ -778,7 +786,7 @@ section.authorities img.colorImage{
 }
 
 section.authorities img.grayImage{
-    opacity: 0.5;
+    opacity: 0.85;
     z-index: 1;
     animation: grayImage 8s linear infinite;
 }
@@ -796,10 +804,10 @@ section.authorities div.text h1{
         opacity: 0;
     }
     10%{
-        opacity: 0.7;
+        opacity: 0.85;
     }
     90%{
-        opacity: 0.7;
+        opacity: 0.85;
     }
     95%{
         opacity: 0;
@@ -830,6 +838,27 @@ section.authorities div.text h1{
     100%{
         opacity: 0;
         transform: translateX(-5%) scale(1.1);
+    }
+}
+
+@keyframes background{
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
     }
 }
 
@@ -1023,8 +1052,6 @@ section.authorities div.text h1{
 @media(orientation: landscape) and (min-width: 533px)
 {
     section.authorities h1{
-        position: absolute;
-        top: 5%;
         font-size: 25px;
     }     
 
@@ -1084,7 +1111,6 @@ section.authorities div.text h1{
 @media(orientation: landscape) and (min-width: 731px)
 {
     section.authorities h1{
-        top: 4%;
         font-size: 30px;
     }     
 
@@ -1117,7 +1143,6 @@ section.authorities div.text h1{
 @media(orientation: landscape) and (min-width: 1024px)
 {
     section.authorities h1{
-        top: 4%;
         font-size: 40px;
     }     
 
@@ -1148,7 +1173,6 @@ section.authorities div.text h1{
 {
     section.authorities h1{
         font-size: 60px;
-        top: 3%;
     }     
 
     section.authorities img.grayImage{
@@ -1178,7 +1202,6 @@ section.authorities div.text h1{
 {
     section.authorities h1{
         font-size: 60px;
-        top: 4%;
     }     
 
     section.authorities img.grayImage{
@@ -1359,5 +1382,396 @@ section.contact{
     background-color: black;
     font-family: 'Saira Extra Condensed';
 }
+
+section.contact>h1{
+    text-align: center;
+    color: white;
+}
+
+section.contact input, 
+section.contact button,
+section.contact textarea{
+    display: block;
+}
+
+section.contact div.contacts{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+section.contact div.contacts div.inputs{
+    flex-basis: 50%;
+    margin: 0 auto;
+}
+
+section.contact div.contacts a{
+    text-decoration: none;
+    color: #ddd;
+}
+
+section.contact div.contacts div.icons{
+    flex-basis: 50%;
+    width: 60vw;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+section.contact div.contacts div.inputs input{
+    width: 60vw;
+    padding: 10px 0;
+    margin: 5px 0;
+}
+
+section.contact div.contacts div.inputs textarea{
+    width: 60vw;
+    height: 20vh;
+    margin: 5px 0;
+}
+
+section.contact div.contacts div.inputs button{
+    border: 2px solid #ddd;
+    padding: 10px;
+    font-weight: bold;
+    color:white;
+    background-color: black;
+}
+
+section.contact div.contacts div.icons span{
+    padding-left: 10px;
+}
+
+@media(orientation: portrait) and (min-width: 320px)
+{
+    section.contact>h1{
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    section.contact div.contacts div.inputs input{
+        padding: 10px 5px;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        padding: 5px;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        padding: 10px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 10px;
+        font-size: 20px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 411px)
+{
+    section.contact>h1{
+        font-size: 35px;
+        line-height: 70px;
+    }
+
+    section.contact div.contacts div.inputs input{
+        padding: 15px 5px;
+        margin: 5px 0;
+        font-size: 15px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        margin: 5px 0;
+        padding: 10px 5px;
+        font-size: 15px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        padding: 15px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 15px;
+        font-size: 25px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 768px)
+{
+    section.contact>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.contact div.contacts div.inputs input{
+        padding: 20px 5px;
+        margin: 10px 0;
+        font-size: 25px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        margin: 10px 0;
+        padding: 10px 5px;
+        font-size: 25px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        padding: 25px;
+        line-height: 50px;
+        font-size: 25px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 25px;
+        font-size: 40px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 1024px)
+{
+    section.contact>h1{
+        font-size: 70px;
+        line-height: 140px;
+    }
+
+    section.contact div.contacts div.inputs input{
+        padding: 20px 5px;
+        margin: 10px 0;
+        font-size: 30px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        margin: 10px 0;
+        padding: 10px 5px;
+        font-size: 30px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        padding: 25px;
+        line-height: 60px;
+        font-size: 30px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 30px;
+        font-size: 50px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 530px)
+{
+    section.contact>h1{
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    section.contact div.contacts{
+        flex-direction: row;
+    }
+
+    section.contact div.contacts div.inputs{
+        margin-left: 5vw;
+    }
+
+    section.contact div.contacts div.inputs input{
+        width: 50vw;
+        padding: 10px 5px;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    section.contact div.contacts div.icons{
+        margin-left: 5vw;
+        width: 50vw;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        width: 50vw;
+        padding: 5px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        padding: 10px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 10px;
+        font-size: 20px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 640px)
+{
+    section.contact div.contacts{
+        margin-top: 5vh;
+    }
+
+}
+
+@media(orientation: landscape) and (min-width: 731px)
+{
+    section.contact>h1{
+        font-size: 35px;
+        line-height: 70px;
+    }
+
+    section.contact div.contacts{
+        margin-top: 5vh;
+    }
+
+    section.contact div.contacts div.inputs input{
+        padding: 15px 5px;
+        margin: 5px 0;
+        font-size: 15px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        margin: 5px 0;
+        padding: 5px;
+        font-size: 15px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        padding: 15px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 15px;
+        font-size: 25px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1024px)
+{
+    section.contact>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.contact div.contacts div.inputs input{
+        padding: 20px 5px;
+        margin: 10px 0;
+        font-size: 25px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        margin: 10px 0;
+        padding: 10px 5px;
+        font-size: 25px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        margin-top: 5vh;
+        padding: 25px;
+        line-height: 50px;
+        font-size: 25px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 25px;
+        font-size: 40px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1366px)
+{
+    section.contact>h1{
+        font-size: 70px;
+        line-height: 140px;
+    }
+
+    section.contact div.contacts div.inputs input{
+        padding: 20px 5px;
+        margin: 10px 0;
+        font-size: 30px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        margin: 10px 0;
+        padding: 10px 5px;
+        font-size: 30px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        padding: 25px;
+        line-height: 60px;
+        font-size: 30px;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 30px;
+        font-size: 50px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1400px)
+{
+    section.contact>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.contact div.contacts div.icons{
+        margin-left: 10vw;
+    }
+
+    section.contact div.contacts div.inputs input{
+        width: 45vw;
+        padding: 20px 5px;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    
+    section.contact div.contacts div.inputs textarea{
+        width: 45vw;
+        margin: 10px 0;
+        padding: 10px 5px;
+        font-size: 20px;
+    }
+    
+    section.contact div.contacts div.inputs button{
+        margin-top: 5vh;
+        padding: 20px;
+        line-height: 40px;
+        font-size: 20px;
+        transition: 0.3s linear;
+        cursor: pointer;
+    }
+
+    section.contact div.contacts div.inputs button:hover{
+        background-color: #666;
+    }
+    
+    section.contact div.contacts div.icons span{
+        padding-left: 25px;
+        font-size: 30px;
+    }
+}
+
+footer {
+    background-color :#666;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
 
 
