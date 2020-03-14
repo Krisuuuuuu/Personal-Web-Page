@@ -396,6 +396,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 header div.motto{
@@ -574,11 +575,11 @@ div.container{
     display: flex;
     flex-direction: column;
     top: 50%;
-    left: 50%;
+    left: 54%;
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    background-color: #888;
+    background-color: rgb(1, 87, 97);
 
 }
 
@@ -589,6 +590,8 @@ section.aboutMe div.container div.world{
     background-size: cover;
     background-position: center;
 }
+
+
 
 section.aboutMe div.container div.description{
     font-family: 'Saira Extra Condensed';
@@ -601,6 +604,7 @@ section.aboutMe div.container div.description{
 section.aboutMe div.container div.description h1{
     margin-bottom: 10%;
     font-size: 20px;
+    text-transform: uppercase;
 }
 
 section.aboutMe div.container div.description p{
@@ -663,6 +667,10 @@ section.aboutMe div.container div.description.aboutMeActive{
 
 @media(orientation: landscape) and (min-width: 533px)
 {
+    div.container{
+        left: 50%;
+    }
+
     section.aboutMe div.container div.description h1{
         font-size: 20px;
         margin-bottom: 5%;
@@ -734,3 +742,622 @@ section.aboutMe div.container div.description.aboutMeActive{
         font-size: 35px;
     }
 }
+
+section.authorities{
+    position: relative;
+    height: 110vh;
+    background-color: #bbb;
+    color: #ddd;
+    font-family: 'Saira Extra Condensed';
+    overflow: hidden;
+}
+
+section.authorities h1{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    z-index: 3;
+}
+
+
+section.authorities img{
+    position: absolute;
+}
+
+section.authorities div.text{
+    width: 80%;
+    position: absolute;
+    z-index: 3;
+    color: black;
+    animation: text 8s linear infinite;
+}
+
+section.authorities img.colorImage{
+    z-index: 2;
+    animation: colorImage 8s linear infinite;
+}
+
+section.authorities img.grayImage{
+    opacity: 0.5;
+    z-index: 1;
+    animation: grayImage 8s linear infinite;
+}
+
+section.authorities div.text h1{
+    background-color: transparent;
+}
+
+@keyframes grayImage{
+    0%{
+        opacity: 0;
+        transform: translateX(0) scale(1);
+    }
+    5%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.7;
+    }
+    90%{
+        opacity: 0.7;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(5%) scale(1.05);
+    }
+}
+
+@keyframes colorImage{
+    0%{
+        opacity: 0;
+        transform: translateX(0) scale(1);
+    }
+    5%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-5%) scale(1.1);
+    }
+}
+
+@keyframes text{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    5%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+@media(orientation: portrait) and (min-width: 320px)
+{
+    section.authorities h1{
+        font-size: 30px;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -30%;
+        left: -25%;
+        height: 120%;
+    }
+
+    section.authorities img.colorImage{
+        bottom: 0%;
+        right: 0%;
+        height: 60%;
+        
+    }
+    
+    section.authorities div.text{
+        top: 15%;
+        left: 14%;
+        transform: translateX(-50%);
+    }
+    
+    section.authorities div.text h1{
+        font-size: 20px;
+        text-align: none;
+    }
+    section.authorities div.text h2{
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 360px){
+    section.authorities img.grayImage{
+        left: -35%;
+    }
+
+    section.authorities img.colorImage{
+        right: -5%;
+        
+    }
+}
+
+@media(orientation: portrait) and (min-width: 411px)
+{
+    section.authorities h1{
+        font-size: 35px;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -40%;
+        left: -40%;
+        height: 130%;
+    }
+    
+    section.authorities div.text{
+        top: 15%;
+        left: 14%;
+        transform: translateX(-50%);
+    }
+    
+    section.authorities div.text h1{
+        font-size: 25px;
+        text-align: none;
+    }
+    section.authorities div.text h2{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 375px) and (min-height: 812px)
+{
+    section.authorities h1{
+        font-size: 35px;
+    }     
+
+    section.authorities img.grayImage{
+        left: -45%;
+    }
+
+    section.authorities img.colorImage{
+        right: -15%;       
+    }
+    
+    section.authorities div.text h1{
+        font-size: 25px;
+    }
+    section.authorities div.text h2{
+        font-size: 20px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 411px) and (min-height: 823px)
+{
+    section.authorities img.grayImage{
+        left: -50%;
+    }
+
+    section.authorities img.colorImage{
+        right: -5%;       
+    }
+    
+}
+
+@media(orientation: portrait) and (min-width: 768px)
+{
+    section.authorities h1{
+        font-size: 50px;
+    }     
+
+    section.authorities img.grayImage{
+        left: -20%;
+    }
+
+    section.authorities img.colorImage{
+        right: 0%;       
+    }
+    
+    section.authorities div.text h1{
+        font-size: 40px;
+    }
+    section.authorities div.text h2{
+        font-size: 35px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 1024px)
+{
+    section.authorities h1{
+        font-size: 60px;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -35%;
+        left: -20%;
+    }
+
+    section.authorities img.colorImage{
+        right: 0%;       
+    }
+    
+    section.authorities div.text h1{
+        font-size: 50px;
+    }
+    section.authorities div.text h2{
+        font-size: 45px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 1024px) and (min-height: 1366px)
+{
+    section.authorities img.grayImage{
+        bottom: -40%;
+        left: -15%;
+    }
+
+    section.authorities img.colorImage{
+        right: 0%;       
+    }
+}
+
+@media(orientation: landscape) and (min-width: 533px)
+{
+    section.authorities h1{
+        position: absolute;
+        top: 5%;
+        font-size: 25px;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -60%;
+        left: -7%;
+        height: 140%;
+    }
+
+    section.authorities img.colorImage{
+        bottom: 0%;
+        right: 3%;
+        height: 60%;
+        
+    }
+    
+    section.authorities div.text{
+        top: 22%;
+        left: 40%;
+        width: 50%;
+        transform: translateX(-50%);
+    }
+    
+    section.authorities div.text h1{
+        position: static;
+        font-size: 17px;
+        text-align: none;
+    }
+    section.authorities div.text h2{
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 640px)
+{
+    section.authorities img.grayImage{
+        bottom: -59%;
+        left: -10%;
+        height: 140%;
+    }
+
+    section.authorities img.colorImage{
+        bottom: 0%;
+        right: 3%;
+        height: 60%;       
+    }
+
+    section.authorities div.text h1{
+        font-size: 20px;
+    }
+    section.authorities div.text h2{
+        font-size: 18px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 731px)
+{
+    section.authorities h1{
+        top: 4%;
+        font-size: 30px;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -50%;
+        left: -5%;
+        height: 130%;
+    }
+
+    section.authorities div.text{
+        top: 22%;
+    }
+    
+    section.authorities div.text h1{
+        font-size: 23px;
+    }
+    section.authorities div.text h2{
+        font-size: 20px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 812px)
+{
+    section.authorities div.text{
+        top: 23%;
+    }
+    
+}
+
+@media(orientation: landscape) and (min-width: 1024px)
+{
+    section.authorities h1{
+        top: 4%;
+        font-size: 40px;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -55%;
+        left: -17%;
+        height: 140%;
+    }
+
+    section.authorities img.colorImage{
+        right: 1.5%;     
+    }
+
+    section.authorities div.text{
+        top: 22%;
+        left: 43%;
+    }
+    
+    section.authorities div.text h1{
+        font-size: 30px;
+    }
+    section.authorities div.text h2{
+        font-size: 25px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1366px)
+{
+    section.authorities h1{
+        font-size: 60px;
+        top: 3%;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -57%;
+        left: -17%;
+        height: 140%;
+    }
+
+    section.authorities img.colorImage{
+        right: 1%;     
+    }
+
+    section.authorities div.text{
+        top: 22%;
+        left: 43%;
+    }
+    
+    section.authorities div.text h1{
+        font-size: 40px;
+    }
+    section.authorities div.text h2{
+        font-size: 35px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1400px)
+{
+    section.authorities h1{
+        font-size: 60px;
+        top: 4%;
+    }     
+
+    section.authorities img.grayImage{
+        bottom: -90%;
+        left: -10%;
+        height: 170%;
+    }
+
+    section.authorities img.colorImage{
+        right: 3%;     
+    }
+
+    section.authorities div.text{
+        top: 24%;
+    }
+    
+    section.authorities div.text h1{
+        font-size: 40px;
+    }
+    section.authorities div.text h2{
+        font-size: 35px;
+    }
+}
+
+section.passions{
+    position: relative;
+    height: 120vh;
+    background-color:black;
+    font-family: 'Saira Extra Condensed';
+}
+
+section.passions div.items{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.passions>h1{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+section.passions div.item{
+    flex-basis: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+section.passions div.item p{
+    text-align: center;
+    text-shadow: 0 0 4px black;
+    padding: 5px 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+section.passions div.item:nth-of-type(1){
+    background-image: url(../images/f1.jpg);
+}
+
+section.passions div.item:nth-of-type(2){
+    background-image: url(../images/squat.jpg);
+}
+
+section.passions div.item:nth-of-type(3){
+    background-image: url(../images/dinosaur.jpg);
+}
+
+section.passions div.item:nth-of-type(4){
+    background-image: url(../images/IT.jpg);
+}
+
+
+@media(orientation: portrait) and (min-width: 320px)
+{
+    section.passions>h1{
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    section.passions div.item{
+        flex-basis: 100%;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 768px)
+{
+    section.passions>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.passions div.item p{
+        font-size: 40px;
+        padding: 10px 0;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 533px)
+{
+    section.passions div.items{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    section.passions>h1{
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    section.passions div.item{
+        flex-basis: 50%;
+        height: 50%;
+    }
+
+}
+
+@media(orientation: landscape) and (min-width: 768px)
+{
+    section.passions>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.passions div.item p{
+        font-size: 40px;
+        padding: 10px 0;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1400px)
+{
+    section.passions div.item{
+        background-size: 110%;
+        transition: 1s;
+    }
+
+    section.passions div.item:nth-of-type(1){
+        background-size: 130%;
+        transition: 1s;
+    }
+
+    section.passions div.item p{
+        line-height: calc((120vh - 38px)/2);
+        opacity: 0;
+    }
+
+    section.passions div.item:hover p{
+        opacity: 1;
+    }
+
+    section.passions div.item:hover{
+        background-size: 140%;
+    }
+
+    section.passions div.item:nth-of-type(1):hover{
+        background-size: 160%;
+        transition: 1s;
+    }
+}
+
+section.skills{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Saira Extra Condensed';
+}
+
+section.contact{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    font-family: 'Saira Extra Condensed';
+}
+
+
