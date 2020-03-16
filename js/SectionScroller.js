@@ -1,4 +1,4 @@
-$('nav ul li a').on('click', function()
+$('nav ul li').on('click', function()
 {
     const sectionId = '#' + $(this).attr('class');
     $('body, html').animate({
