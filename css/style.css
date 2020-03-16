@@ -1309,7 +1309,6 @@ section.passions div.item:nth-of-type(4){
     section.passions div.items{
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-start;
     }
 
     section.passions>h1{
@@ -1370,9 +1369,260 @@ section.passions div.item:nth-of-type(4){
 
 section.skills{
     position: relative;
+    background-image: url(../images/forest_fog.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     font-family: 'Saira Extra Condensed';
+    margin-top: 8%;
+}
+
+section.skills>h1{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+section.skills ul.skillsList{
+    list-style: none;
+    width: 40%;
+    margin: 3% auto;
+    color: #f7dc4f;
+}
+
+section.skills ul.skillsList li{
+    padding: 20px;
+}
+
+section.skills ul.skillsList li span.bar{
+    background-color: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #2187e7b3;
+}
+
+section.skills span.bar span{
+    display: block;
+    float: left;
+    background-color: #2187e7;
+    height: 20px;
+    transition: 3s;
+}
+section.skills ul.skillsList li span.bar span
+{
+    width: 0;
+}
+
+section.skills ul.skillsList li span.bar span.cSharp{
+    width: 70%;
+}
+
+
+section.skills ul.skillsList li span.bar span.cPlus{
+    width: 60%;
+}
+
+
+section.skills ul.skillsList li span.bar span.html{
+    width: 80%;
+}
+
+
+section.skills ul.skillsList li span.bar span.css{
+    width: 75%;
+}
+
+
+section.skills ul.skillsList li span.bar span.sql{
+    width: 55%;
+}
+
+@media(orientation: portrait) and (min-width: 320px)
+{
+    section.skills>h1{
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    section.skills ul.skillsList{
+        width: 75%;
+        margin: 10% auto;
+    }
+    
+    section.skills ul.skillsList li{
+        padding: 10px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 360px)
+{
+    section.skills ul.skillsList{
+        margin: 20% auto;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 411px)
+{
+    section.skills ul.skillsList{
+        margin: 25% auto;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 768px)
+{
+    section.skills>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.skills p{
+        font-size: 40px;
+    }
+
+    section.skills ul.skillsList{
+        margin: 25% auto;
+    }
+
+    section.skills ul.skillsList li{
+        padding: 15px;
+    }
+}
+
+@media(orientation: portrait) and (min-width: 1024px)
+{
+    section.skills>h1{
+        font-size: 70px;
+        line-height: 140px;
+    }
+
+    section.skills p{
+        font-size: 50px;
+    }
+
+    section.skills ul.skillsList{
+        margin: 25% auto;
+    }
+
+    section.skills ul.skillsList li{
+        padding: 20px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 533px)
+{
+    section.skills>h1{
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    section.skills ul.skillsList{
+        width: 75%;
+    }
+
+    section.skills p{
+        font-size: 15px;
+    }
+    
+    section.skills ul.skillsList li{
+        padding: 2px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 640px)
+{    
+    section.skills ul.skillsList li{
+        padding: 5px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 731px)
+{    
+    section.skills p{
+        font-size: 20px;
+    }
+
+    section.skills ul.skillsList li{
+        padding: 5px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 812px) and (min-height: 375px)
+{    
+    section.skills p{
+        font-size: 15px;
+    }
+
+    section.skills ul.skillsList li{
+        padding: 3px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1024px)
+{
+    section.skills>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.skills ul.skillsList{
+        width: 50%;
+        margin: 8% auto;
+    }
+
+    section.skills p{
+        font-size: 30px;
+    }
+    
+    section.skills ul.skillsList li{
+        padding: 10px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1366px)
+{
+    section.skills>h1{
+        font-size: 70px;
+        line-height: 140px;
+    }
+
+    section.skills ul.skillsList{
+        width: 50%;
+        margin: 10% auto;
+    }
+
+    section.skills p{
+        font-size: 40px;
+    }
+    
+    section.skills ul.skillsList li{
+        padding: 15px;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 1400px)
+{
+    section.skills>h1{
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    section.skills ul.skillsList{
+        margin: 2% auto;
+    }
+
+    section.skills p{
+        font-size: 30px;
+    }
+    
+    section.skills ul.skillsList li{
+        padding: 20px;
+    }
 }
 
 section.contact{
