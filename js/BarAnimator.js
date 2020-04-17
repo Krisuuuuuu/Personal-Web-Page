@@ -7,18 +7,17 @@ const $sectionSkills = $("section.skills")
 const sectionSkillsHeight = $sectionSkills.outerHeight();
 const sectionSkillsPosition = $sectionSkills.offset().top;
 
-function ShowBars()
-{
+function ShowBars(){
     let scrollValue = $document.scrollTop();
 
-    if(scrollValue > sectionPosition - windowHeight)
-    {
+    if(scrollValue > sectionPosition - windowHeight + 300){
         $spanCSharp.addClass("cSharp");
         $spanCPlus.addClass("cPlus");
         $spanHtml.addClass("html");
         $spanCss.addClass("css");
         $spanSql.addClass("sql");
     }
+    
 }
 
 $document.on("scroll", ShowBars);

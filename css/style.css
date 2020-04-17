@@ -1412,7 +1412,8 @@ section.skills span.bar span{
     float: left;
     background-color: #2187e7;
     height: 20px;
-    transition: 3s;
+    transition: 5s;
+    transition-delay: 1s;
 }
 section.skills ul.skillsList li span.bar span
 {

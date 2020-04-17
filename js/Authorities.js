@@ -13,8 +13,7 @@ const tabOfBgImages = ['C:/Users/krisu/Desktop/Dokumenty/Projekty/Personal%20Web
 let counter = 1;
 let interval = 8000;
 
-function ChangeAnimationObject()
-{
+function ChangeAnimatedObject(){
     h1.textContent = '"' + tabOfQuotations[counter] + '"';
     h2.textContent = tabOfAuthorities[counter];
     grayImage.src = tabOfGrayImages[counter];
@@ -22,11 +21,11 @@ function ChangeAnimationObject()
     background.style.backgroundImage = "url("+tabOfBgImages[counter]+")";
     counter++;
 
-    if(counter == 2)
-    {
+    if(counter == 2){
         counter = 0;
     }
+    
 }
 
-setInterval(ChangeAnimationObject, interval);
+setInterval(ChangeAnimatedObject, interval);
 
