@@ -746,21 +746,26 @@ section.aboutMe div.container div.description.aboutMeActive{
     }
 }
 
-section.authorities{
+section.authorities-container{
     position: relative;
     height: 110vh;
-    background-color: #bbb;
+    background-color: black;
+    color: #ddd;
+    font-family: 'Saira Extra Condensed';
+    overflow: hidden;
+}
+
+section.authorities{
+    height: 100%;
     background-image: url(../images/court.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    color: #ddd;
-    font-family: 'Saira Extra Condensed';
-    overflow: hidden;
+    transition: 0.7s ease-in;
     animation: background 8s linear infinite;
 }
 
-section.authorities h1{
+section.authorities-container>h1{
     width: 100%;
     text-align: center;
     background-color: black;
@@ -777,6 +782,7 @@ section.authorities div.text{
     position: absolute;
     z-index: 3;
     color: white;
+    transition: 0.3s;
     animation: text 8s linear infinite;
 }
 
@@ -793,6 +799,7 @@ section.authorities img.grayImage{
 
 section.authorities div.text h1{
     background-color: transparent;
+    text-align: center;
 }
 
 @keyframes grayImage{
@@ -800,16 +807,16 @@ section.authorities div.text h1{
         opacity: 0;
         transform: translateX(0) scale(1);
     }
-    5%{
+    3%{
         opacity: 0;
     }
-    10%{
+    8%{
         opacity: 0.85;
     }
     90%{
         opacity: 0.85;
     }
-    95%{
+    97%{
         opacity: 0;
     }
     100%{
@@ -823,16 +830,16 @@ section.authorities div.text h1{
         opacity: 0;
         transform: translateX(0) scale(1);
     }
-    5%{
+    3%{
         opacity: 0;
     }
-    10%{
+    8%{
         opacity: 1;
     }
     90%{
         opacity: 1;
     }
-    95%{
+    98%{
         opacity: 0;
     }
     100%{
@@ -845,16 +852,16 @@ section.authorities div.text h1{
     0%{
         opacity: 0;
     }
-    5%{
+    3%{
         opacity: 0;
     }
-    10%{
+    8%{
         opacity: 1;
     }
     90%{
         opacity: 1;
     }
-    95%{
+    98%{
         opacity: 0;
     }
     100%{
@@ -867,16 +874,16 @@ section.authorities div.text h1{
         opacity: 0;
         transform: scale(1);
     }
-    5%{
+    3%{
         opacity: 0;
     }
-    10%{
+    8%{
         opacity: 1;
     }
     90%{
         opacity: 1;
     }
-    95%{
+    98%{
         opacity: 0;
     }
     100%{
@@ -886,8 +893,9 @@ section.authorities div.text h1{
 }
 @media(orientation: portrait) and (min-width: 320px)
 {
-    section.authorities h1{
+    section.authorities-container>h1{
         font-size: 30px;
+        line-height: 60px;
     }     
 
     section.authorities img.grayImage{
@@ -932,8 +940,9 @@ section.authorities div.text h1{
 
 @media(orientation: portrait) and (min-width: 411px)
 {
-    section.authorities h1{
+    section.authorities-container>h1{
         font-size: 35px;
+        line-height: 70px;
     }     
 
     section.authorities img.grayImage{
@@ -960,10 +969,6 @@ section.authorities div.text h1{
 
 @media(orientation: portrait) and (min-width: 375px) and (min-height: 812px)
 {
-    section.authorities h1{
-        font-size: 35px;
-    }     
-
     section.authorities img.grayImage{
         left: -45%;
     }
@@ -994,8 +999,9 @@ section.authorities div.text h1{
 
 @media(orientation: portrait) and (min-width: 768px)
 {
-    section.authorities h1{
+    section.authorities-container>h1{
         font-size: 50px;
+        line-height: 100px;
     }     
 
     section.authorities img.grayImage{
@@ -1016,8 +1022,9 @@ section.authorities div.text h1{
 
 @media(orientation: portrait) and (min-width: 1024px)
 {
-    section.authorities h1{
+    section.authorities-container>h1{
         font-size: 60px;
+        line-height: 120px;
     }     
 
     section.authorities img.grayImage{
@@ -1051,8 +1058,9 @@ section.authorities div.text h1{
 
 @media(orientation: landscape) and (min-width: 533px)
 {
-    section.authorities h1{
+    section.authorities-container>h1{
         font-size: 25px;
+        line-height: 50px;
     }     
 
     section.authorities img.grayImage{
@@ -1110,8 +1118,9 @@ section.authorities div.text h1{
 
 @media(orientation: landscape) and (min-width: 731px)
 {
-    section.authorities h1{
+    section.authorities-container>h1{
         font-size: 30px;
+        line-height: 60px;
     }     
 
     section.authorities img.grayImage{
@@ -1142,8 +1151,9 @@ section.authorities div.text h1{
 
 @media(orientation: landscape) and (min-width: 1024px)
 {
-    section.authorities h1{
-        font-size: 40px;
+    section.authorities-container>h1{
+        font-size: 50px;
+        line-height: 100px;
     }     
 
     section.authorities img.grayImage{
@@ -1171,10 +1181,11 @@ section.authorities div.text h1{
 
 @media(orientation: landscape) and (min-width: 1366px)
 {
-    section.authorities h1{
+    section.authorities-container>h1{
         font-size: 60px;
-    }     
-
+        line-height: 120px;
+    } 
+    
     section.authorities img.grayImage{
         bottom: -57%;
         left: -17%;
@@ -1199,11 +1210,7 @@ section.authorities div.text h1{
 }
 
 @media(orientation: landscape) and (min-width: 1400px)
-{
-    section.authorities h1{
-        font-size: 60px;
-    }     
-
+{  
     section.authorities img.grayImage{
         bottom: -90%;
         left: -10%;
@@ -1412,8 +1419,8 @@ section.skills span.bar span{
     float: left;
     background-color: #2187e7;
     height: 20px;
-    transition: 5s;
-    transition-delay: 1s;
+    transition: 3s;
+    transition-delay: 0.3s;
 }
 section.skills ul.skillsList li span.bar span
 {
@@ -1426,21 +1433,21 @@ section.skills ul.skillsList li span.bar span.cSharp{
 
 
 section.skills ul.skillsList li span.bar span.cPlus{
-    width: 60%;
+    width: 40%;
 }
 
 
 section.skills ul.skillsList li span.bar span.html{
-    width: 80%;
+    width: 70%;
 }
 
 
 section.skills ul.skillsList li span.bar span.css{
-    width: 75%;
+    width: 70%;
 }
 
 
-section.skills ul.skillsList li span.bar span.sql{
+section.skills ul.skillsList li span.bar span.javascript{
     width: 55%;
 }
 
@@ -2020,9 +2027,25 @@ footer {
     background-color :#666;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
-  }
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media(orientation: portrait) and (min-width: 411px){
+    footer{
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+@media(orientation: landscape) and (min-width: 731px){
+    footer{
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
 
 

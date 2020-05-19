@@ -10,12 +10,12 @@ const sectionSkillsPosition = $sectionSkills.offset().top;
 function ShowBars(){
     let scrollValue = $document.scrollTop();
 
-    if(scrollValue > sectionPosition - windowHeight + 300){
+    if(scrollValue > sectionSkillsPosition - sectionSkillsHeight + sectionSkillsHeight/4){
         $spanCSharp.addClass("cSharp");
         $spanCPlus.addClass("cPlus");
         $spanHtml.addClass("html");
         $spanCss.addClass("css");
-        $spanSql.addClass("sql");
+        $spanSql.addClass("javascript");
     }
     
 }
